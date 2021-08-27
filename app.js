@@ -6,7 +6,7 @@ const ejs = require("ejs");
 const mongoose = require('mongoose');
 
 const homeStartingContent = "First we thought the PC was a calculator. Then we found out how to turn numbers into letters with ASCII — and we thought it was a typewriter. Then we discovered graphics, and we thought it was a television. With the World Wide Web, we've realized it's a brochure.";
-const aboutContent = "I am currently a 3rd year B.TECH CSE student.I am passionate about coding, and always keen to learn how technology solves our day-to-day problems.";
+const aboutContent = "I am currently a 4th year B.TECH CSE student.I am passionate about coding, and always keen to learn how technology solves our day-to-day problems.";
 const contactContent = "kumarashwini018@gmail.com";
 
 const app = express();
@@ -16,7 +16,7 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
-mongoose.connect("mongodb://localhost:27017/blogDB", {useNewUrlParser: true});
+mongoose.connect("mongodb://localhost:27017/QuotesDB", {useNewUrlParser: true});
 
 const postSchema = {
   title: String,
